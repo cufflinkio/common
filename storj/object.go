@@ -32,6 +32,8 @@ type Object struct {
 	Expires     time.Time
 
 	Stream
+
+	CufflinkUpdatedMacaroon []byte
 }
 
 // ObjectInfo contains information about a specific object.
