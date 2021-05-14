@@ -32,6 +32,9 @@ type Object struct {
 	Expires     time.Time
 
 	Stream
+
+	// Cufflink modification that allows the server to return a new macaroon
+	CufflinkUpdatedMacaroon []byte
 }
 
 // ObjectInfo contains information about a specific object.

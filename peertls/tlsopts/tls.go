@@ -22,7 +22,9 @@ func (opts *Options) ServerTLSConfig() *tls.Config {
 
 // ClientTLSConfig returns a TSLConfig for use as a client in handshaking with a peer.
 func (opts *Options) ClientTLSConfig(id storj.NodeID) *tls.Config {
-	return opts.tlsConfig(false, verifyIdentity(id))
+	// Cufflink modification. Remove NodeID check
+	// TODO use our own NodeID here
+	return opts.tlsConfig(false) //, verifyIdentity(id))
 }
 
 // UnverifiedClientTLSConfig returns a TLSConfig for use as a client in handshaking with
